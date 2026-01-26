@@ -16,7 +16,7 @@
 # character. For example, for the repo located at
 # https://github.com/uwescience/ai-abcs_2025-10-27, this would be:
 # baseurl: /ai-abcs_2025-10-27
-baseurl: ai-abcs_2026-03-02-uw
+baseurl: /ai-abcs_2026-03-02-uw
 
 # The course contact email.
 # This is currently only listed on the code-of-conduct page as one of the ways
