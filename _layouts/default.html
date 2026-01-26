@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }}{% if site.suffix %}, {{site.suffix}}{% endif %}</title>
+
+    {% include meta.html %}
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+
+    {% include scripts.html %}
+    
+    <!-- Originally created with Jekyll Now - http://github.com/barryclark/jekyll-now; heavily modified by hand since. -->
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="headcontainer">
+        <header class="masthead clearfix">
+          <center>
+            <table border="0" cellpadding="0" style="margin-bottom: 10px;">
+              <tr>
+                <td style="width: 130px; vertical-align: middle;">
+                  <a href="{{ site.baseurl }}/" style="vertical-align: middle;">
+                    <img src="{{ site.avatar }}"
+                         style="width: 100%; vertical-align: middle;"/></a></td>
+                <td style="vertical-align: middle; padding-left: 20px;">
+                  <div class="site-info" style="vertical-align: middle;">
+                    <div class="site-description; vertical-align: middle;">
+                      <p style="margin:0; font-size:24pt; font-weight:400; color:#39275B">
+                        An AI/ML Workshop for Beginners</p>
+                      <p style="margin:0; font-size:14pt">
+                        {% if site.orgname and site.divname %}
+                        Offered by
+                          {% if site.divurl %}
+                          <a href="{{site.divurl}}">{{site.divname}}</a>
+                          {% else %}
+                          {{site.divname}}
+                          {% endif %}
+                        at
+                          {% if site.orgurl %}
+                          <a href="{{site.orgurl}}">{{site.orgname}}</a>
+                          {% else %}
+                          {{site.orgname}}
+                          {% endif %}
+                        {% elsif site.divname %}
+                        Offered by
+                          {% if site.divurl %}
+                          <a href="{{site.divurl}}">{{site.divname}}</a>
+                          {% else %}
+                          {{site.divname}}
+                          {% endif %}
+                        {% elsif site.orgname %}
+                        Offered by
+                          {% if site.orgurl %}
+                          <a href="{{site.orgurl}}">{{site.orgname}}</a>
+                          {% else %}
+                          {{site.orgname}}
+                          {% endif %}
+                        {% endif %}
+                        </p>
+                      <p style="margin:0; font-size:14pt">
+                        {{ site.datesstring }}, {{ site.timestring }},
+                        Registration Required</p></div></div></td></tr></table>
+            <nav style="font-size:12pt; background-color:#DFDDE8; width:100%;height:55px; border-bottom:1px solid #39275B; border-top:1px solid #39275B;">
+              <a style="color:#39275B;" href="{{ site.baseurl }}/">Home</a>
+              <a style="color:#39275B;" href="{{ site.baseurl }}/program">Program</a>
+              <a style="color:#39275B;" href="{{ site.baseurl }}/instructors">Instructors</a>
+              <a style="color:#39275B;" href="{{ site.baseurl }}/register">Register</a>
+              <a style="color:#39275B;" href="{{ site.baseurl }}/prep">Preparing</a>
+              <a style="color:#39275B;" href="{{ site.baseurl }}/code-of-conduct">Code of Conduct</a>
+            </nav>
+          </center>
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      {{ content }}
+    </div>
+
+    <div class="wrapper-footer">
+      <p style="font-size:10pt"> <center>
+          This workshop is a 4-day course on introductory machine learning methods for
+          structured data. No credit or certification is offered to participants.</center></p>
+      {% if site.divlogo %}
+      <p> <center>
+          {% if site.divurl %} <a href="{{ site.divurl }}"> {% endif %}
+          <img src="{{ site.baseurl }}/{{ site.divlogo }}" height="40"/>
+          {% if site.divurl %} </a> {% endif %}
+          </center></p>
+      {% endif %}
+      {% if site.orglogo %}
+      <p> <center>
+          {% if site.orgurl %} <a href="{{ site.orgurl }}"> {% endif %}
+          <img src="{{ site.baseurl }}/{{ site.orglogo }}" height="40"/>
+          {% if site.divurl %} </a> {% endif %}
+          </center></p>
+      {% endif %}
+    </div>
+
+    {% include analytics.html %}
+  </body>
+</html>

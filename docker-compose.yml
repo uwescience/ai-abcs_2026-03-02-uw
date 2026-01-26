@@ -1,0 +1,13 @@
+services:
+  ai_abcs_website:
+    image: bretfisher/jekyll-serve
+    ports:
+      - "4000:4000"
+    volumes:
+      - "$PWD:/site"
+    labels:
+      - "jekyll"
+    stdin_open: true
+    tty: true
+    command: |
+      jekyll serve --watch --drafts --force_polling --trace

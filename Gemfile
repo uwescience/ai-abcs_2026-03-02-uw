@@ -1,0 +1,7 @@
+source "https://rubygems.org"
+gem "jekyll"
+gem "jekyll-sass-converter"
+gem "jekyll-remote-theme"
+gem "jekyll-sitemap"
+gem "jekyll-feed"
+gem "jekyll-seo-tag"

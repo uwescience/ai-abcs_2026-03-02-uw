@@ -1,0 +1,206 @@
+# Configuration ###############################################################
+#
+# This file contains the configuration of the AI ABCs course webpage!
+# The first section contains items that either must or should be filled out for
+# each workshop; the remainder of the file contains items that should probably
+# not be changed.
+
+# Always Edit -----------------------------------------------------------------
+#
+# Most of the configuration items in this section need to be updated for
+# every workshop website. It is recommended that you go through each of these
+# each time you use the template.
+
+# The base URL of the github IO page.
+# This should be the name of this github repository preceded by a /
+# character. For example, for the repo located at
+# https://github.com/uwescience/ai-abcs_2025-10-27, this would be:
+# baseurl: /ai-abcs_2025-10-27
+baseurl: FIX ME
+
+# The course contact email.
+# This is currently only listed on the code-of-conduct page as one of the ways
+# to report a CoC violation.
+# Please note, however, that if you are running a workshop outside of eScience
+# you need to manually change the code-of-conduct.md page to reflect your
+# code of conduct and reporting mechanisms.
+contact:
+  name: FIX ME
+  email: FIX ME
+
+# The dates of the course in plain language.
+# For example, the pilot AI ABC's program used this datestring:
+# datestring: Oct. 27&ndash;30 (Mon.&ndash;Thu.), 2025
+datesstring: FIX ME
+
+# The verbose start date of the course in plain language.
+# For example, Monday October 27th.
+firstdate: FIX ME
+  
+# The verbose last date of the course in plain language.
+# For example, Thursday October 30th.
+lastdate: FIX ME
+
+# The attendance modality the course is using.
+# This can be any of the following:
+# attendance: online
+# attendance: in-person
+# attendance: hybrid
+attendance: in-person
+
+# Instructors.
+# This should be a list of each instructor, including email addresses, github
+# ID, and a photo URL; all of these are optional. If photo is excluded but
+# github is included, the github profile picture is used.
+# There's no photo in the example, but note that for a photo, it needs to be
+# a full https://... URL; if you use a local URL, it needs to start with
+# /<baseurl>, e.g., /ai-abcs_2025-10-27/images/logo.svg, not images/logo.svg.
+instructors:
+  - name: Noah C. Benson
+    url: https://nben.net/
+    div: eScience Institute
+    org: University of Washington
+    email: nben@uw.edu
+    github: noahbenson
+# - name: second instructor name
+#   email: instructor2@uw.edu
+#   github: instructor2
+
+# Helpers
+# This should be a list of helpers just like the instructors list. If empty,
+# it won't be included.
+helpers:
+  
+# Administrators
+# This should be a list of administrators just like the instructors and helpers
+# lists. If empty, it won't be included.
+admin:
+
+# Registration information
+# The cost of the event and the link to a site where they can register.
+registration:
+  cost: $10.00
+  link: FIX ME
+
+  
+# Sometimes Edit --------------------------------------------------------------
+#
+# These configuration items probably don't need to change every time, but they
+# get changed sometimes.
+
+# The time of the course.
+# For example, the pilot AI ABC's program used this timestring, which is when
+# we do most of our SWC-like workshops:
+# timestring: 9:00am&ndash;noon
+timestring: 9:00&ndash;noon
+
+# The physical location where the workshop is being held.
+# If blank, no location will be given (for example, if you want to send the
+# location only after registration).
+location: |
+  the WRF Data Science Studio on the 6th floor of the Physics/Astronomy Tower
+  at the University of Washington
+
+# A google-map link to the location, if desired.
+# If blank, no link is included.
+loclink: https://maps.app.goo.gl/RMzp9vGYJ4XfXv7d8
+
+
+# Rarely Edit -----------------------------------------------------------------
+#
+# If you're using this template outside of UW eScience, then you will likely
+# need to edit several of these, and you may want to create your own fork of
+# this template repo with your custom values.
+# Otherwise, these configuration items might occasionally need to be updated,
+# but they probably don't need to be updated for a typical workshop (at least
+# for UW eScience).
+
+# The name used in the title of the webpage.
+title: The A.I. ABCs
+
+# The URL of the AI ABCs Jupyter Book.
+bookurl: https://noahbenson.github.io/AI-ABCs
+
+# The name of the department/division that is putting on the workshop. You can
+# leave this blank to exclude mention of a department.
+# div_name: the Department of Data Science
+divname: the eScience Institute
+
+# The URL of the department/division. If blank, there won't be a link in the
+# footer for the division name.
+divurl: https://escience.washington.edu/
+
+# The logo of the department/division. If blank, then this won't be included
+# in the footer of the website. This must be a file in this repository, and
+# the address should be relative to the baseurl. For example, if the cloned
+# github repo is uwescience/ai-abcs_2025-10-27 and the file is in the repo as
+# /_static/logo.svg, then this setting should be _static/logo.svg, and the
+# logo file will be publicly exposed as
+# https://uwescience.github.io/ai-abcs_2025-10-27/_static/logo.svg---in other
+# words, don't include the ai-abcs_2025-10-27 in this address.
+divlogo: images/escience-logo.png
+
+# The name of the organization that is putting on the workshop. You can leave
+# this blank to exclude mention of an organization. If you provide only one of
+# the divname and the orgname, it will use that one; if you provide neither,
+# then no sponsor is noted.
+orgname: the University of Washington
+
+# The URL for the organization.
+orgurl: https://washington.edu/
+
+# The logo of the organization. See the comments on the divlogo setting above
+# for information on how to specify this.
+orglogo: images/washington-logo.png
+
+# The URL for this website (Used for Sitemap.xml).
+url: http://uwescience.github.io
+
+# URL for the AI ABCs logo/avatar image.
+avatar: https://noahbenson.github.io/AI-ABCs/_static/logo.svg
+
+# The theme we use:
+remote_theme: pages-themes/cayman@v0.2.0
+show_downloads: false
+
+# Enter a Google Analytics web tracking code (e.g. UA-2110908-2) to activate
+# tracking.
+google_analytics:
+
+
+# Static Configuration --------------------------------------------------------
+#
+# Don't change the items below this line unless you know what you're doing.
+
+permalink: /:title/
+
+# The release of Jekyll Now that you're using
+version: v3.1.0
+
+# Jekyll 3 now only supports Kramdown for Markdown
+kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: 'highlight'
+
+# Set the Sass partials directory, as we're using @imports
+sass:
+  style: :expanded # You might prefer to minify using :compressed
+
+# Use the following plug-ins
+plugins:
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-remote-theme
+
+# Exclude these files from your production _site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
