@@ -1,6 +1,6 @@
 ## What is the "A.I. ABCs"?
 
-The A.I. ABCs is a workshop that teaches surveys the many AI/ML tools available
+The A.I. ABCs is a workshop that surveys the many AI/ML tools available
 for analyzing structured data. The workshop is targeted at researchers with
 some programming experience but modest exposure to advanced math, stats, and
 computation.
